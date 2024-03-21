@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration page</title>
+<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+<div class="container">
+    <h1>Registration page</h1>
+    <form action="register.jsp" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="un" placeholder="Enter your username"><br>
+        <label for="password">Password:</label>
+        <div class="password-input">
+            <input type="password" id="password" name="pwd" placeholder="Enter your password">
+            <span class="toggle-password" onclick="togglePasswordVisibility('password')"></span>
+        </div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <div class="password-input">
+            <input type="password" id="confirmPassword" name="cps" placeholder="Confirm your password">
+            <span class="toggle-password" onclick="togglePasswordVisibility('confirmPassword')"></span>
+        </div>
+        <input type="submit" value="Register">
+    </form>
+</div>
+<script>
+function togglePasswordVisibility(inputId) {
+    var input = document.getElementById(inputId);
+    var icon = document.querySelector(`#${inputId} + .toggle-password`);
+
+    if (input.type === "password") {
+        input.type = "text";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+    } else {
+        input.type = "password";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+    }
+}
+</script>
+</body>
+</html>

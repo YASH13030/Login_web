@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buy Products - All-in-One E-Stop</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: #222; /* Dark gray background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #0f330f; /* Dark green border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #222; /* Dark gray input background */
+    color: #fff; /* White text color */
+    transition: border-color 0.3s ease;
+  }
+
+  input[type="submit"] {
+    background-color: #0f330f; /* Dark green button */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #1a4b1a; /* Darker green on hover */
+  }
+
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="submit"]:focus {
+    border-color: #fff; /* White border color on focus */
+    outline: none; /* Remove default focus outline */
+  }
+
+  img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+  }
+</style>
+</head>
+<body>
+<h1>Welcome to your All-in-One E-Stop</h1>
+<img src="your-image.jpg" alt="Product Image"> <!-- Replace "your-image.jpg" with the actual image URL -->
+<form action="ordercnf.jsp" method="post">
+  <label for="product">Product:</label>
+  <input type="text" id="product" name="pro" placeholder="Enter product name"><br>
+  <label for="quantity">Quantity:</label>
+  <input type="number" id="quantity" name="quan" placeholder="Enter quantity"><br>
+  <input type="submit" value="Confirm Order">
+</form>
+
+<form action="QuantityServlet" method="post">
+<input type="submit" value="Show Items">
+</form>
+</body>
+</html>
