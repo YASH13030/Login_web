@@ -1,3 +1,3 @@
 # web-CRUD
 
-this repository contains crud database operations implemented in a web page in console .It is a hybrid console+web project ... it has jsp implementations Servlet implementation and connecting web page to database.
+this repository contains code for creation of a login and registration page connected to MySQL database using servlets jsp and java. a good statrting project to start backend development using java.
